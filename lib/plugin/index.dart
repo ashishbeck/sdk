@@ -173,7 +173,8 @@ abstract class PolkawalletPluginBase {
 
   /// Plugin should define a list of node to connect
   /// for users of Polkawallet App.
-  List<NetworkParams> get nodeList => [];
+  Future<List<NetworkParams>> get nodeList async => [];
+  // setCustomNodeList(customNodes) => nodeList = nodeList + customNodes;
 
   /// Plugin should provide [tokenIcons]
   /// for display in Assets page of Polkawallet App.
