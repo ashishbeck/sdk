@@ -8,8 +8,10 @@ class ServiceStaking {
   final SubstrateService serviceRoot;
 
   Future<Map> queryElectedInfo() async {
+    print("+++++ 3");
     Map data = await serviceRoot.webView
         .evalJavascript('staking.querySortedTargets(api)', allowRepeat: false);
+    print("+++++ 4");
     return data;
   }
 
@@ -53,6 +55,12 @@ class ServiceStaking {
   Future<int> getSlashingSpans(String stashId) async {
     final int spans = await serviceRoot.webView
         .evalJavascript('staking.getSlashingSpans(api, "$stashId")');
+    return spans;
+  }
+
+  Future asyncLoadAccounts() async {
+    final spans =
+        await serviceRoot.webView.evalJavascript('staking.asyncLoadAccounts()');
     return spans;
   }
 }

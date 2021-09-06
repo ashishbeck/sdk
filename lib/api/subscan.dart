@@ -55,7 +55,8 @@ class SubScanApi {
     if (network.contains('acala')) {
       network = 'acala-testnet';
     }
-    return 'https://$network.api.subscanner.io/api/scan';
+    // return 'https://polkadot.api.subscan.io/api/scan';
+    return 'https://$network.api.subscan.io/api/scan';
   }
 
   /// do the request in an isolate to avoid UI stall

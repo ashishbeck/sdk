@@ -10,7 +10,9 @@ class ApiStaking {
   final ServiceStaking service;
 
   Future<Map> queryElectedInfo() async {
+    print("+++++ 1");
     Map data = await service.queryElectedInfo();
+    print("+++++ 2");
     return data;
   }
 
@@ -57,6 +59,11 @@ class ApiStaking {
 
   Future<int> getSlashingSpans(String stashId) async {
     final int spans = await service.getSlashingSpans(stashId);
+    return spans;
+  }
+
+  Future asyncLoadAccounts() async {
+    final spans = await service.asyncLoadAccounts();
     return spans;
   }
 }

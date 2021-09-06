@@ -9,6 +9,9 @@ import type { Option, StorageKey } from '@polkadot/types';
 import { u8aConcat, u8aToHex, BN_ZERO, BN_MILLION, BN_ONE, formatBalance, isFunction, arrayFlatten } from '@polkadot/util';
 import {  Nominations } from "@polkadot/types/interfaces";
 import BN from "bn.js";
+import { web3Accounts, web3Enable } from "@polkadot/extension-dapp";
+// import keyring from "../keyring";
+import keyring from "@polkadot/ui-keyring";
 
 import { getInflationParams, Inflation } from './inflation';
 
@@ -556,8 +559,10 @@ async function querySortedTargets(api: ApiPromise) {
   api.derive.staking.waitingInfo({withPrefs: true}),
   api.derive.session.info(),
   api.query.staking.minNominatorBond(),
+  api.derive.staking.overview(),
  ]);
- 
+ (<any>window).send("stakingOverview", data[6]);
+//  console.log("stakingOverview", JSON.stringify(data[6]));
  const partial = data[1] && data[2] && data[3] && data[4]
  ? _extractTargetsInfo(api, data[2], data[3], data[1], _transfromEra(data[4]), data[0])
  : {};
@@ -810,6 +815,36 @@ async function getSlashingSpans(api: ApiPromise, stashId: string) {
   return res.isNone ? 0 : res.unwrap().prior.length + 1;
 }
 
+
+
+async function asyncLoadAccounts() {
+    // dispatch({ type: 'LOAD_KEYRING' });
+    return new Promise(async (resolve, reject) => {
+  try {
+      await web3Enable('axia');
+      let allAccounts = await web3Accounts();
+      allAccounts = allAccounts.map(({ address, meta }) =>
+      ({ address, meta: { ...meta, name: `${meta.name} (${meta.source})` } }));
+      // console.log(allAccounts);
+      keyring.loadAll({ isDevelopment: true }, allAccounts);
+      // dispatch({ type: 'SET_KEYRING', payload: keyring });
+      const keyringOptions = keyring.getPairs().map((account: any) => ({
+        key: account.address,
+        value: account.address,
+        text: account.meta.name.toUpperCase(),
+        icon: 'user'
+        }));
+      // console.log("testing keyring options", keyringOptions);
+      resolve(keyringOptions);
+      // return keyringOptions;
+    } catch (e) {
+      console.error(e);
+      // dispatch({ type: 'KEYRING_ERROR' });
+      reject(e);
+    }
+});
+  };
+
 export default {
   loadValidatorRewardsData,
   getAccountRewardsEraOptions,
@@ -818,4 +853,5 @@ export default {
   queryNominations,
   getOwnStashInfo,
   getSlashingSpans,
+  asyncLoadAccounts
 };
