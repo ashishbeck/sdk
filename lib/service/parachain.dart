@@ -1,4 +1,4 @@
-import 'package:polkawallet_sdk/service/index.dart';
+import 'package:axiawallet_sdk/service/index.dart';
 
 class ServiceParachain {
   ServiceParachain(this.serviceRoot);

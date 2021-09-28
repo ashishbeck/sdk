@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/api/types/networkStateData.dart';
-import 'package:polkawallet_sdk_example/pages/keyring.dart';
+import 'package:axiawallet_sdk/axiawallet_sdk.dart';
+import 'package:axiawallet_sdk/api/types/networkStateData.dart';
+import 'package:axiawallet_sdk_example/pages/keyring.dart';
 
 class SettingPage extends StatefulWidget {
   SettingPage(this.sdk, this.showResult);

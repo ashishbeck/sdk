@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/api/types/txInfoData.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk_example/pages/keyring.dart';
+import 'package:axiawallet_sdk/axiawallet_sdk.dart';
+import 'package:axiawallet_sdk/api/types/txInfoData.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk_example/pages/keyring.dart';
 
 class TxPage extends StatefulWidget {
   TxPage(this.sdk, this.keyring, this.showResult);

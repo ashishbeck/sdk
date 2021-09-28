@@ -1,5 +1,5 @@
-import { allNetworks } from "@polkadot/networks";
-import { assert } from "@polkadot/util";
+import { allNetworks } from "@axiasolar-js/networks";
+import { assert } from "@axiasolar-js/util";
 
 const colors = {
   background: {
@@ -40,8 +40,8 @@ export const UnknownNetworkKeys = Object.freeze({
 
 // genesisHash is used as Network key for Substrate networks
 export const SubstrateNetworkKeys = Object.freeze({
-  KUSAMA: "0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe", // https://polkascan.io/pre/kusama-cc3/block/0
-  POLKADOT: "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
+  AXIALUNAR: "0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe", // https://polkascan.io/pre/axialunar-cc3/block/0
+  AXIASOLAR: "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
 });
 
 const unknownNetworkBase = {
@@ -57,24 +57,24 @@ const unknownNetworkBase = {
 };
 
 const substrateNetworkBase = {
-  [SubstrateNetworkKeys.KUSAMA]: {
+  [SubstrateNetworkKeys.AXIALUNAR]: {
     color: "#000",
     decimals: 12,
-    genesisHash: SubstrateNetworkKeys.KUSAMA,
+    genesisHash: SubstrateNetworkKeys.AXIALUNAR,
     order: 2,
-    pathId: "kusama",
+    pathId: "axialunar",
     prefix: 2,
-    title: "Kusama",
+    title: "AXIALunar",
     unit: "KSM",
   },
-  [SubstrateNetworkKeys.POLKADOT]: {
+  [SubstrateNetworkKeys.AXIASOLAR]: {
     color: "#E6027A",
     decimals: 12,
     genesisHash: null,
     order: 1,
-    pathId: "polkadot",
+    pathId: "axiasolar",
     prefix: 0,
-    title: "Polkadot",
+    title: "AXIASolar",
     unit: "DOT",
   },
 };
@@ -108,12 +108,12 @@ export const PATH_IDS_LIST = substrateNetworkMetas.map((meta: any) => meta.pathI
 
 export const NETWORK_LIST = Object.freeze(Object.assign({}, SUBSTRATE_NETWORK_LIST, [], UNKNOWN_NETWORK));
 
-export const defaultNetworkKey = SubstrateNetworkKeys.KUSAMA;
+export const defaultNetworkKey = SubstrateNetworkKeys.AXIALUNAR;
 
 function getGenesis(name: string): string {
   const network = allNetworks.find(({ network }) => network === name);
   assert(network && network.genesisHash[0], `Unable to find genesisHash for ${name}`);
   return network.genesisHash[0];
 }
-export const KUSAMA_GENESIS = getGenesis("kusama");
-export const POLKADOT_GENESIS = getGenesis("polkadot");
+export const AXIALUNAR_GENESIS = getGenesis("axialunar");
+export const AXIASOLAR_GENESIS = getGenesis("axiasolar");

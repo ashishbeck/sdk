@@ -1,22 +1,22 @@
 import 'dart:async';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/service/account.dart';
-import 'package:polkawallet_sdk/service/assets.dart';
-import 'package:polkawallet_sdk/service/gov.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/service/parachain.dart';
-import 'package:polkawallet_sdk/service/recovery.dart';
-import 'package:polkawallet_sdk/service/setting.dart';
-import 'package:polkawallet_sdk/service/staking.dart';
-import 'package:polkawallet_sdk/service/tx.dart';
-import 'package:polkawallet_sdk/service/uos.dart';
-import 'package:polkawallet_sdk/service/walletConnect.dart';
-import 'package:polkawallet_sdk/service/webViewRunner.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/service/account.dart';
+import 'package:axiawallet_sdk/service/assets.dart';
+import 'package:axiawallet_sdk/service/gov.dart';
+import 'package:axiawallet_sdk/service/keyring.dart';
+import 'package:axiawallet_sdk/service/parachain.dart';
+import 'package:axiawallet_sdk/service/recovery.dart';
+import 'package:axiawallet_sdk/service/setting.dart';
+import 'package:axiawallet_sdk/service/staking.dart';
+import 'package:axiawallet_sdk/service/tx.dart';
+import 'package:axiawallet_sdk/service/uos.dart';
+import 'package:axiawallet_sdk/service/walletConnect.dart';
+import 'package:axiawallet_sdk/service/webViewRunner.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
 
-/// The service calling JavaScript API of `polkadot-js/api` directly
-/// through [WebViewRunner], providing APIs for [PolkawalletApi].
+/// The service calling JavaScript API of `axiasolar-js/api` directly
+/// through [WebViewRunner], providing APIs for [AXIAWalletApi].
 class SubstrateService {
   ServiceKeyring keyring;
   ServiceSetting setting;

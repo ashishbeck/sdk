@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/api/types/networkParams.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk_example/pages/account.dart';
-import 'package:polkawallet_sdk_example/pages/dAppPage.dart';
-import 'package:polkawallet_sdk_example/pages/keyring.dart';
-import 'package:polkawallet_sdk_example/pages/setting.dart';
-import 'package:polkawallet_sdk_example/pages/tx.dart';
+import 'package:axiawallet_sdk/api/types/networkParams.dart';
+import 'package:axiawallet_sdk/axiawallet_sdk.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk_example/pages/account.dart';
+import 'package:axiawallet_sdk_example/pages/dAppPage.dart';
+import 'package:axiawallet_sdk_example/pages/keyring.dart';
+import 'package:axiawallet_sdk_example/pages/setting.dart';
+import 'package:axiawallet_sdk_example/pages/tx.dart';
 
 void main() {
   runApp(MyApp());
@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Polkawallet SDK Demo',
+      title: 'AXIAWallet SDK Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -99,8 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
       _connecting = true;
     });
     final node = NetworkParams();
-    node.name = 'Kusama';
-    node.endpoint = 'wss://kusama-1.polkawallet.io:9944/';
+    node.name = 'AXIALunar';
+    node.endpoint = 'wss://axialunar-1.axiawallet.io:9944/';
     node.ss58 = 2;
     final res = await widget.sdk.api.connectNode(widget.keyring, [node]);
     if (res != null) {
@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
         : CupertinoActivityIndicator();
     return Scaffold(
       appBar: AppBar(
-        title: Text('Polkawallet SDK Demo'),
+        title: Text('AXIAWallet SDK Demo'),
       ),
       body: SafeArea(
         child: ListView(

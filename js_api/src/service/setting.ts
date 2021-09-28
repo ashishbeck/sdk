@@ -1,4 +1,4 @@
-import { ApiPromise } from "@polkadot/api";
+import { ApiPromise } from "@axiasolar-js/api";
 import { SubstrateNetworkKeys } from "../constants/networkSpect";
 
 /**
@@ -28,12 +28,12 @@ export async function getNetworkConst(api: ApiPromise) {
 }
 
 /**
- * get network properties, and replace polkadot decimals with const 10.
+ * get network properties, and replace axiasolar decimals with const 10.
  */
 export async function getNetworkProperties(api: ApiPromise) {
   const chainProperties = await api.rpc.system.properties();
   const genesisHash = api.genesisHash.toHuman();
-  return genesisHash == SubstrateNetworkKeys.POLKADOT
+  return genesisHash == SubstrateNetworkKeys.AXIASOLAR
     ? api.registry.createType("ChainProperties", {
         ...chainProperties,
         tokenDecimals: [10],

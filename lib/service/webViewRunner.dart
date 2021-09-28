@@ -6,10 +6,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:jaguar/jaguar.dart';
-import 'package:polkawallet_sdk/api/types/networkParams.dart';
-import 'package:polkawallet_sdk/service/jaguar_flutter_asset.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/api/types/networkParams.dart';
+import 'package:axiawallet_sdk/service/jaguar_flutter_asset.dart';
+import 'package:axiawallet_sdk/service/keyring.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
 
 class WebViewRunner {
   HeadlessInAppWebView _web;
@@ -38,7 +38,7 @@ class WebViewRunner {
 
     _jsCode = jsCode ??
         await rootBundle
-            .loadString('packages/polkawallet_sdk/js_api/dist/main.js');
+            .loadString('packages/axiawallet_sdk/js_api/dist/main.js');
     print('js file loaded');
 
     if (_web == null) {
@@ -102,9 +102,9 @@ class WebViewRunner {
 
   Future<void> _startLocalServer() async {
     final cert = await rootBundle
-        .load("packages/polkawallet_sdk/lib/ssl/certificate.pem");
+        .load("packages/axiawallet_sdk/lib/ssl/certificate.pem");
     final keys =
-        await rootBundle.load("packages/polkawallet_sdk/lib/ssl/keys.pem");
+        await rootBundle.load("packages/axiawallet_sdk/lib/ssl/keys.pem");
     final security = new SecurityContext()
       ..useCertificateChainBytes(cert.buffer.asInt8List())
       ..usePrivateKeyBytes(keys.buffer.asInt8List());

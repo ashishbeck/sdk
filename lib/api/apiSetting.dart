@@ -1,11 +1,11 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/networkStateData.dart';
-import 'package:polkawallet_sdk/service/setting.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/api/types/networkStateData.dart';
+import 'package:axiawallet_sdk/service/setting.dart';
 
 class ApiSetting {
   ApiSetting(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final AXIAWalletApi apiRoot;
   final ServiceSetting service;
 
   final _msgChannel = "BestNumber";

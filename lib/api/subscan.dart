@@ -49,13 +49,13 @@ class SubScanApi {
   final String moduleRecovery = 'Recovery';
 
   static String getSnEndpoint(String network) {
-    if (network.contains('polkadot')) {
-      network = 'polkadot';
+    if (network.contains('axiasolar')) {
+      network = 'axiasolar';
     }
     if (network.contains('acala')) {
       network = 'acala-testnet';
     }
-    // return 'https://polkadot.api.subscan.io/api/scan';
+    // return 'https://axiasolar.api.subscan.io/api/scan';
     return 'https://$network.api.subscan.io/api/scan';
   }
 
@@ -65,7 +65,7 @@ class SubScanApi {
     String address,
     int page, {
     int size = tx_list_page_size,
-    String network = 'kusama',
+    String network = 'axialunar',
   }) async {
     Completer completer = new Completer<Map>();
 
@@ -93,7 +93,7 @@ class SubScanApi {
     int page = 0,
     int size = tx_list_page_size,
     String sender,
-    String network = 'kusama',
+    String network = 'axialunar',
   }) async {
     Completer completer = new Completer<Map>();
 
@@ -121,7 +121,7 @@ class SubScanApi {
     int page = 0,
     int size = tx_list_page_size,
     String sender,
-    String network = 'kusama',
+    String network = 'axialunar',
   }) async {
     Completer completer = new Completer<Map>();
 

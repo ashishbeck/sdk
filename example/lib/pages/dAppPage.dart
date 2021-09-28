@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/webviewWithExtension/webviewWithExtension.dart';
+import 'package:axiawallet_sdk/axiawallet_sdk.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/webviewWithExtension/webviewWithExtension.dart';
 
 class DAppPage extends StatefulWidget {
   DAppPage(this.sdk, this.keyring);

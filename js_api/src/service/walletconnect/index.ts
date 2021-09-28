@@ -1,9 +1,9 @@
-import { ApiPromise } from "@polkadot/api";
+import { ApiPromise } from "@axiasolar-js/api";
 import WalletConnectClient, { CLIENT_EVENTS } from "@walletconnect/client";
 import { SessionTypes, ClientTypes } from "@walletconnect/types";
 
-import { Keyring } from "@polkadot/keyring";
-import { hexToU8a, u8aToHex, isHex, stringToU8a } from "@polkadot/util";
+import { Keyring } from "@axiasolar-js/keyring";
+import { hexToU8a, u8aToHex, isHex, stringToU8a } from "@axiasolar-js/util";
 
 let client: WalletConnectClient;
 
@@ -77,10 +77,10 @@ async function disconnect(param: SessionTypes.DeleteParams) {
 async function approveProposal(proposal: SessionTypes.Proposal, address: string) {
   const response: SessionTypes.Response = {
     metadata: {
-      name: "Polkawallet",
-      description: "Mobile wallet for polkadot ecosystem.",
+      name: "AXIAWallet",
+      description: "Mobile wallet for axiasolar ecosystem.",
       url: "#",
-      icons: ["https://polkawallet.io/images/logo.png"],
+      icons: ["https://axiawallet.io/images/logo.png"],
     },
     state: {
       accounts: [address],

@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/txInfoData.dart';
-import 'package:polkawallet_sdk/service/tx.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/api/types/txInfoData.dart';
+import 'package:axiawallet_sdk/service/tx.dart';
 
 class ApiTx {
   ApiTx(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final AXIAWalletApi apiRoot;
   final ServiceTx service;
 
   /// Estimate tx fees, [params] will be ignored if we have [rawParam].

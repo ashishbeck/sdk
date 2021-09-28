@@ -1,9 +1,9 @@
-import { ApiPromise } from '@polkadot/api';
-import type { TrieIndex, BlockNumber } from '@polkadot/types/interfaces';
-import {  u8aConcat, u8aToHex, BN_ZERO, BN_ONE, u8aEq, stringToU8a } from '@polkadot/util';
+import { ApiPromise } from '@axiasolar-js/api';
+import type { TrieIndex, BlockNumber } from '@axiasolar-js/types/interfaces';
+import {  u8aConcat, u8aToHex, BN_ZERO, BN_ONE, u8aEq, stringToU8a } from '@axiasolar-js/util';
 
-import { blake2AsU8a } from '@polkadot/util-crypto';
-import type { u32 } from '@polkadot/types';
+import { blake2AsU8a } from '@axiasolar-js/util-crypto';
+import type { u32 } from '@axiasolar-js/types';
 import BN from 'bn.js';
 
 const CROWD_PREFIX = stringToU8a('modlpy/cfund');

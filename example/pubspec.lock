@@ -263,7 +263,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
-  polkawallet_sdk:
+  axiawallet_sdk:
     dependency: "direct dev"
     description:
       path: ".."

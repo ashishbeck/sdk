@@ -1,10 +1,10 @@
 import 'package:flutter_aes_ecb_pkcs5/flutter_aes_ecb_pkcs5.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:polkawallet_sdk/api/apiKeyring.dart';
-import 'package:polkawallet_sdk/storage/localStorage.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/utils/index.dart';
-import 'package:polkawallet_sdk/utils/localStorage.dart';
+import 'package:axiawallet_sdk/api/apiKeyring.dart';
+import 'package:axiawallet_sdk/storage/localStorage.dart';
+import 'package:axiawallet_sdk/storage/types/keyPairData.dart';
+import 'package:axiawallet_sdk/utils/index.dart';
+import 'package:axiawallet_sdk/utils/localStorage.dart';
 
 /// A [Keyring] instance maintains the local storage
 /// of key-pairs for users.

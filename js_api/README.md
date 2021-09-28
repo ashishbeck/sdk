@@ -1,8 +1,8 @@
 # js_api
 
-Wrap `@polkadot-js/api` to provide APIs for polkawallet/sdk.
+Wrap `@axiasolar-js-js/api` to provide APIs for axiawallet/sdk.
 
-@polkadot-js/api: ^v1.29.1
+@axiasolar-js-js/api: ^v1.29.1
 
 ## build & test
 

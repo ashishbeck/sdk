@@ -1,11 +1,11 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/parachain/auctionData.dart';
-import 'package:polkawallet_sdk/service/parachain.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/api/types/parachain/auctionData.dart';
+import 'package:axiawallet_sdk/service/parachain.dart';
 
 class ApiParachain {
   ApiParachain(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final AXIAWalletApi apiRoot;
   final ServiceParachain service;
 
   Future<AuctionData> queryAuctionWithWinners() async {

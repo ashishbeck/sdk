@@ -1,16 +1,16 @@
-library polkawallet_sdk;
+library axiawallet_sdk;
 
 import 'dart:async';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/service/index.dart';
-import 'package:polkawallet_sdk/service/webViewRunner.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/service/index.dart';
+import 'package:axiawallet_sdk/service/webViewRunner.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
 
-/// SDK launchs a hidden webView to run polkadot.js/api for interacting
+/// SDK launchs a hidden webView to run axiasolar.js/api for interacting
 /// with the substrate-based block-chain network.
 class WalletSDK {
-  PolkawalletApi api;
+  AXIAWalletApi api;
 
   SubstrateService _service;
 
@@ -19,7 +19,7 @@ class WalletSDK {
   WebViewRunner get webView => _service.webView;
 
   /// param [jsCode] is customized js code of parachain,
-  /// the api works without [jsCode] param in Kusama/Polkadot.
+  /// the api works without [jsCode] param in AXIALunar/AXIASolar.
   Future<void> init(
     Keyring keyring, {
     WebViewRunner webView,
@@ -45,7 +45,7 @@ class WalletSDK {
       },
     );
 
-    api = PolkawalletApi(_service);
+    api = AXIAWalletApi(_service);
     api.init();
     return c.future;
   }

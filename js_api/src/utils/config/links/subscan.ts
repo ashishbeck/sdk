@@ -1,11 +1,11 @@
 export default {
   chains: {
     "Acala Mandala TC4": "acala-testnet",
-    Kusama: "kusama",
-    "Kusama CC3": "kusama",
-    Polkadot: "polkadot",
-    "Polkadot CC1": "polkadot-cc1",
-    Westend: "westend",
+    AXIALunar: "axialunar",
+    "AXIALunar CC3": "axialunar",
+    AXIASolar: "axiasolar",
+    "AXIASolar CC1": "axiasolar-cc1",
+    AlphaNet: "alphanet",
   },
   create: (chain: string, path: string, data: any) =>
     `https://${chain}.subscan.io/${path}/${data.toString()}`,

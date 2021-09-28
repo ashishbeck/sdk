@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/api/apiKeyring.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
+import 'package:axiawallet_sdk/axiawallet_sdk.dart';
+import 'package:axiawallet_sdk/api/apiKeyring.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/storage/types/keyPairData.dart';
 
 class KeyringPage extends StatefulWidget {
   KeyringPage(this.sdk, this.keyring, this.showResult);
@@ -328,13 +328,13 @@ class _KeyringPageState extends State<KeyringPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       RaisedButton(
-                        child: Text('Polkadot: 0'),
+                        child: Text('AXIASolar: 0'),
                         color:
                             _ss58 == 0 ? Theme.of(context).primaryColor : null,
                         onPressed: () => _setSS58(0),
                       ),
                       RaisedButton(
-                        child: Text('Kusama: 2'),
+                        child: Text('AXIALunar: 2'),
                         color:
                             _ss58 == 2 ? Theme.of(context).primaryColor : null,
                         onPressed: () => _setSS58(2),

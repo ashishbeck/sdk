@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:polkawallet_sdk/api/types/parachain/bidData.dart';
-import 'package:polkawallet_sdk/api/types/parachain/fundData.dart';
+import 'package:axiawallet_sdk/api/types/parachain/bidData.dart';
+import 'package:axiawallet_sdk/api/types/parachain/fundData.dart';
 
 part 'auctionData.g.dart';
 

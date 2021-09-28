@@ -1,7 +1,7 @@
 import "@babel/polyfill";
-import { enable, handleResponse } from "@polkadot/extension-base/page";
-import { injectExtension } from "@polkadot/extension-inject";
-import { web3Accounts, web3Enable } from "@polkadot/extension-dapp";
+import { enable, handleResponse } from "@axiasolar-js/extension-base/page";
+import { injectExtension } from "@axiasolar-js/extension-inject";
+import { web3Accounts, web3Enable } from "@axiasolar-js/extension-dapp";
 import handlers from "./handlers";
 
 // send message to JSChannel: assembly
@@ -39,7 +39,7 @@ window.addEventListener("message", ({ data, source }) => {
 });
 
 injectExtension(enable, {
-  name: "polkawallet",
+  name: "axiawallet",
   version: "0.9.0",
 });
 

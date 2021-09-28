@@ -1,11 +1,11 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/service/account.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/api/types/balanceData.dart';
+import 'package:axiawallet_sdk/service/account.dart';
 
 class ApiAccount {
   ApiAccount(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final AXIAWalletApi apiRoot;
   final ServiceAccount service;
 
   /// encode addresses to publicKeys

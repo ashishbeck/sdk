@@ -1,21 +1,21 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/verifyResult.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/api/types/verifyResult.dart';
+import 'package:axiawallet_sdk/service/keyring.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/storage/types/keyPairData.dart';
+import 'package:axiawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
 
 enum KeyType { mnemonic, rawSeed, keystore }
 enum CryptoType { sr25519, ed25519 }
 
-/// Keyring API manages keyPairs for through `polkadot-js/keyring`
+/// Keyring API manages keyPairs for through `axiasolar-js/keyring`
 class ApiKeyring {
   ApiKeyring(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final AXIAWalletApi apiRoot;
   final ServiceKeyring service;
 
   /// Generate a set of new mnemonic.

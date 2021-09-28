@@ -1,4 +1,4 @@
-import { ApiPromise } from "@polkadot/api";
+import { ApiPromise } from "@axiasolar-js/api";
 import linked from "./links/index";
 
 function _shortName(name: string) {

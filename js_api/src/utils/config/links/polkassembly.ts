@@ -1,8 +1,8 @@
 export default {
   chains: {
-    Kusama: "kusama",
-    "Kusama CC3": "kusama",
-    Polkadot: "polkadot",
+    AXIALunar: "axialunar",
+    "AXIALunar CC3": "axialunar",
+    AXIASolar: "axiasolar",
   },
   create: (chain: string, path: string, data: any) =>
     `https://${chain}.polkassembly.io/${path}/${data.toString()}`,

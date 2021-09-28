@@ -3,8 +3,8 @@ const HASH_PATHS = ["proposal/councilmotion"];
 export default {
   chains: {
     Edgeware: "edgeware",
-    Kusama: "kusama",
-    "Kusama CC3": "kusama",
+    AXIALunar: "axialunar",
+    "AXIALunar CC3": "axialunar",
   },
   create: (chain: string, path: string, data: any, hash: string) =>
     `https://commonwealth.im/${chain}/${path}/${

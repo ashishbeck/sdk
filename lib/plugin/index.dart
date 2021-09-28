@@ -2,31 +2,31 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/api/types/networkParams.dart';
-import 'package:polkawallet_sdk/api/types/networkStateData.dart';
-import 'package:polkawallet_sdk/plugin/homeNavItem.dart';
-import 'package:polkawallet_sdk/plugin/store/balances.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/service/webViewRunner.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
+import 'package:axiawallet_sdk/api/types/balanceData.dart';
+import 'package:axiawallet_sdk/api/types/networkParams.dart';
+import 'package:axiawallet_sdk/api/types/networkStateData.dart';
+import 'package:axiawallet_sdk/plugin/homeNavItem.dart';
+import 'package:axiawallet_sdk/plugin/store/balances.dart';
+import 'package:axiawallet_sdk/axiawallet_sdk.dart';
+import 'package:axiawallet_sdk/service/webViewRunner.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/storage/types/keyPairData.dart';
 
-const String sdk_cache_key = 'polka_wallet_sdk_cache';
+const String sdk_cache_key = 'axia_wallet_sdk_cache';
 const String net_state_cache_key = 'network_state';
 const String net_const_cache_key = 'network_const';
 const String balance_cache_key = 'balances';
 
-abstract class PolkawalletPlugin implements PolkawalletPluginBase {
+abstract class AXIAWalletPlugin implements AXIAWalletPluginBase {
   /// A plugin has a [WalletSDK] instance for connecting to it's node.
   final WalletSDK sdk = WalletSDK();
 
   /// Plugin should retrieve [balances] from sdk
-  /// for display in Assets page of Polkawallet App.
+  /// for display in Assets page of AXIAWallet App.
   final balances = BalancesStore();
 
   /// Plugin should provide a list of noneNativeToken
-  /// for users of Polkawallet App.
+  /// for users of AXIAWallet App.
   List<TokenBalanceData> get noneNativeTokensAll => [];
 
   final recoveryEnabled = false;
@@ -92,7 +92,7 @@ abstract class PolkawalletPlugin implements PolkawalletPluginBase {
 
   /// This method will be called while App switched to a plugin.
   /// In this method, the plugin will init [WalletSDK] and start
-  /// a webView for running `polkadot-js/api`.
+  /// a webView for running `axiasolar-js/api`.
   Future<void> beforeStart(
     Keyring keyring, {
     WebViewRunner webView,
@@ -167,21 +167,21 @@ abstract class PolkawalletPlugin implements PolkawalletPluginBase {
   }
 }
 
-abstract class PolkawalletPluginBase {
+abstract class AXIAWalletPluginBase {
   /// A plugin's basic info, including: name, primaryColor and icons.
-  final basic = PluginBasicData(name: 'kusama', primaryColor: Colors.black);
+  final basic = PluginBasicData(name: 'axialunar', primaryColor: Colors.black);
 
   /// Plugin should define a list of node to connect
-  /// for users of Polkawallet App.
+  /// for users of AXIAWallet App.
   Future<List<NetworkParams>> get nodeList async => [];
   // setCustomNodeList(customNodes) => nodeList = nodeList + customNodes;
 
   /// Plugin should provide [tokenIcons]
-  /// for display in Assets page of Polkawallet App.
+  /// for display in Assets page of AXIAWallet App.
   final Map<String, Widget> tokenIcons = {};
 
   /// The [getNavItems] method returns a list of [HomeNavItem] which defines
-  /// the [Widget] to be used in home page of polkawallet App.
+  /// the [Widget] to be used in home page of axiawallet App.
   List<HomeNavItem> getNavItems(BuildContext context, Keyring keyring) => [];
 
   /// App will add plugin's pages with custom [routes].
@@ -217,13 +217,13 @@ class PluginBasicData {
   final AssetImage backgroundImage;
 
   /// The icons will be displayed in network-select page
-  /// in Polkawallet App.
+  /// in AXIAWallet App.
   final Widget icon;
   final Widget iconDisabled;
 
   /// JavaScript code version of your plugin.
   ///
-  /// Polkawallet App will perform hot-update for the js code
+  /// AXIAWallet App will perform hot-update for the js code
   /// of your plugin with it.
   final int jsCodeVersion;
 

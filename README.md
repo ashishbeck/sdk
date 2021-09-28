@@ -1,7 +1,7 @@
 # sdk
-polkawallet SDK for integrating substrate-based blockchain as a plugin.
+axiawallet SDK for integrating substrate-based blockchain as a plugin.
 
-# Building a polkawallet_plugin dart package.
+# Building a axiawallet_plugin dart package.
 
 ## 1. Create your plugin repo
 
@@ -13,34 +13,34 @@ cd polkwalllet_plugin_acala/
 add dependencies in pubspec.yaml
 ```yaml
 dependencies:
-  polkawallet_sdk: ^0.1.2
+  axiawallet_sdk: ^0.1.2
 ```
 and install the dependencies.
 ```shell
 flutter pub get
 ```
 
-## 2. Build your polkadot-js wrapper
+## 2. Build your axiasolar-js wrapper
 
-The App use a `polkadot-js/api` instance running in a hidden webView
+The App use a `axiasolar-js/api` instance running in a hidden webView
 to connect to remote node.
 
 Examples:
- - kusama/polkadot: [https://github.com/polkawallet-io/js_api](https://github.com/polkawallet-io/js_api)
- - acala: [https://github.com/polkawallet-io/polkawallet_plugin_acala/tree/master/lib/js_service_acala](https://github.com/polkawallet-io/polkawallet_plugin_acala/tree/master/lib/js_service_acala)
- - laminar: [https://github.com/polkawallet-io/polkawallet_plugin_laminar/tree/master/lib/polkawallet_plugin_laminar](https://github.com/polkawallet-io/polkawallet_plugin_laminar/tree/master/lib/polkawallet_plugin_laminar)
+ - axialunar/axiasolar: [https://github.com/axiawallet-io/js_api](https://github.com/axiawallet-io/js_api)
+ - acala: [https://github.com/axiawallet-io/axiawallet_plugin_acala/tree/master/lib/js_service_acala](https://github.com/axiawallet-io/axiawallet_plugin_acala/tree/master/lib/js_service_acala)
+ - laminar: [https://github.com/axiawallet-io/axiawallet_plugin_laminar/tree/master/lib/axiawallet_plugin_laminar](https://github.com/axiawallet-io/axiawallet_plugin_laminar/tree/master/lib/axiawallet_plugin_laminar)
 
 ## 3. Implement your plugin class
 
 Modify the plugin entry file(eg. polkwalllet_plugin_acala.dart),
-create a `PluginFoo` class extending `PolkawalletPlugin`:
+create a `PluginFoo` class extending `AXIAWalletPlugin`:
 ```dart
-class PluginAcala extends PolkawalletPlugin {
+class PluginAcala extends AXIAWalletPlugin {
   /// define your own plugin
 }
 ```
 
-#### 3.1. override `PolkawalletPlugin.basic`
+#### 3.1. override `AXIAWalletPlugin.basic`
 ```dart
   @override
   final basic = PluginBasicData(
@@ -50,30 +50,30 @@ class PluginAcala extends PolkawalletPlugin {
     gradientColor: Colors.blue,
     // The `bg.png` will be displayed as texture on a block with theme color,
     // so it should have a transparent or dark background color.
-    backgroundImage: AssetImage('packages/polkawallet_plugin_acala/assets/images/bg.png'),
+    backgroundImage: AssetImage('packages/axiawallet_plugin_acala/assets/images/bg.png'),
     icon:
-        Image.asset('packages/polkawallet_plugin_acala/assets/images/logo.png'),
+        Image.asset('packages/axiawallet_plugin_acala/assets/images/logo.png'),
     // The `logo_gray.png` should have a gray color `#9e9e9e`.
     iconDisabled: Image.asset(
-        'packages/polkawallet_plugin_acala/assets/images/logo_gray.png'),
+        'packages/axiawallet_plugin_acala/assets/images/logo_gray.png'),
     isTestNet: false,
   );
 ```
 
-#### 3.2. override `PolkawalletPlugin.tokenIcons`
-Define the icon widgets so the Polkawallet App can display tokens
+#### 3.2. override `AXIAWalletPlugin.tokenIcons`
+Define the icon widgets so the AXIAWallet App can display tokens
 of your para-chain with token icons.
 ```dart
   @override
   final Map<String, Widget> tokenIcons = {
     'KSM': Image.asset(
-        'packages/polkawallet_plugin_kusama/assets/images/tokens/KSM.png'),
+        'packages/axiawallet_plugin_axialunar/assets/images/tokens/KSM.png'),
     'DOT': Image.asset(
-        'packages/polkawallet_plugin_kusama/assets/images/tokens/DOT.png'),
+        'packages/axiawallet_plugin_axialunar/assets/images/tokens/DOT.png'),
   };
 ```
 
-#### 3.3. override `PolkawalletPlugin.nodeList`
+#### 3.3. override `AXIAWalletPlugin.nodeList`
 
 ```dart
 const node_list = [
@@ -91,8 +91,8 @@ const node_list = [
   }
 ```
 
-#### 3.4. override `PolkawalletPlugin.getNavItems(BuildContext, Keyring)`
-Define your custom navigation-item in `BottomNavigationBar` of Polkawallet App.
+#### 3.4. override `AXIAWalletPlugin.getNavItems(BuildContext, Keyring)`
+Define your custom navigation-item in `BottomNavigationBar` of AXIAWallet App.
 The `HomeNavItem.content` is the page content widget displayed while your navItem was selected.
 ```dart
   @override
@@ -101,18 +101,18 @@ The `HomeNavItem.content` is the page content widget displayed while your navIte
       HomeNavItem(
         text: 'Acala',
         icon: SvgPicture.asset(
-          'packages/polkawallet_plugin_acala/assets/images/logo.svg',
+          'packages/axiawallet_plugin_acala/assets/images/logo.svg',
           color: Theme.of(context).disabledColor,
         ),
         iconActive: SvgPicture.asset(
-            'packages/polkawallet_plugin_acala/assets/images/logo.svg'),
+            'packages/axiawallet_plugin_acala/assets/images/logo.svg'),
         content: AcalaEntry(this, keyring),
       )
     ];
   }
 ```
 
-#### 3.5. override `PolkawalletPlugin.getRoutes(Keyring)`
+#### 3.5. override `AXIAWalletPlugin.getRoutes(Keyring)`
 Define navigation route for your plugin pages.
 ```dart
   @override
@@ -132,12 +132,12 @@ Define navigation route for your plugin pages.
   }
 ```
 
-#### 3.6. override `PolkawalletPlugin.loadJSCode()` method
-Load the `polkadot-js/api` wrapper you built in step 2.
+#### 3.6. override `AXIAWalletPlugin.loadJSCode()` method
+Load the `axiasolar-js/api` wrapper you built in step 2.
 ```dart
   @override
   Future<String> loadJSCode() => rootBundle.loadString(
-      'packages/polkawallet_plugin_acala/lib/js_service_acala/dist/main.js');
+      'packages/axiawallet_plugin_acala/lib/js_service_acala/dist/main.js');
 ```
 
 #### 3.7. override plugin life-circle methods
@@ -147,9 +147,9 @@ Load the `polkadot-js/api` wrapper you built in step 2.
  cache of the prev account and query data for new account.
 
 Examples:
- - [kusama/polkadot](https://github.com/polkawallet-io/polkawallet_plugin_kusama/blob/master/lib/polkawallet_plugin_kusama.dart)
- - [acala](https://github.com/polkawallet-io/polkawallet_plugin_acala/blob/master/lib/polkawallet_plugin_acala.dart)
- - [laminar](https://github.com/polkawallet-io/polkawallet_plugin_laminar/blob/master/lib/polkawallet_plugin_laminar.dart)
+ - [axialunar/axiasolar](https://github.com/axiawallet-io/axiawallet_plugin_axialunar/blob/master/lib/axiawallet_plugin_axialunar.dart)
+ - [acala](https://github.com/axiawallet-io/axiawallet_plugin_acala/blob/master/lib/axiawallet_plugin_acala.dart)
+ - [laminar](https://github.com/axiawallet-io/axiawallet_plugin_laminar/blob/master/lib/axiawallet_plugin_laminar.dart)
 
 ## 4. Fetch data and build pages
 
@@ -163,9 +163,9 @@ __ lib
     |__ service (the Actions fired by UI to mutate the store)
     |__ ...
 ```
-To query data through `PolkawalletPlugin.sdk.api`:
+To query data through `AXIAWalletPlugin.sdk.api`:
 
-(`polkawallet-io/polkawallet_plugin_kusama/lib/service/gov.dart`)
+(`axiawallet-io/axiawallet_plugin_axialunar/lib/service/gov.dart`)
 ```dart
   Future<List> queryReferendums() async {
     final data = await api.gov.queryReferendums(keyring.current.address);
@@ -175,7 +175,7 @@ To query data through `PolkawalletPlugin.sdk.api`:
 ```
 To query data by calling JS directly:
 
-(`polkawallet-io/polkawallet_plugin_kusama/lib/service/gov.dart`)
+(`axiawallet-io/axiawallet_plugin_axialunar/lib/service/gov.dart`)
 ```dart
   Future<void> updateBestNumber() async {
     final int bestNumber = await api.service.webView
@@ -189,7 +189,7 @@ While we set data to MobX store, the MobX Observer Flutter Widget will rebuild w
 ## 5. Run your pages in `example/` app
 You may want to run an example app in dev while building your plugin pages.
 
-See the `kusama/polkadot` or `acala` or `laminar` examples:
- - [kusama/polkadot](https://github.com/polkawallet-io/polkawallet_plugin_kusama)
- - [acala](https://github.com/polkawallet-io/polkawallet_plugin_acala)
- - [laminar](https://github.com/polkawallet-io/polkawallet_plugin_laminar)
+See the `axialunar/axiasolar` or `acala` or `laminar` examples:
+ - [axialunar/axiasolar](https://github.com/axiawallet-io/axiawallet_plugin_axialunar)
+ - [acala](https://github.com/axiawallet-io/axiawallet_plugin_acala)
+ - [laminar](https://github.com/axiawallet-io/axiawallet_plugin_laminar)

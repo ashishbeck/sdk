@@ -1,19 +1,19 @@
-import { keyExtractSuri, mnemonicGenerate, cryptoWaitReady, signatureVerify } from "@polkadot/util-crypto";
-import { hexToU8a, u8aToHex } from "@polkadot/util";
+import { keyExtractSuri, mnemonicGenerate, cryptoWaitReady, signatureVerify } from "@axiasolar-js/util-crypto";
+import { hexToU8a, u8aToHex } from "@axiasolar-js/util";
 import BN from "bn.js";
 import { parseQrCode, getSigner, makeTx, getSubmittable } from "../utils/QrSigner";
 import gov from "./gov";
 import metaDataMap from "../constants/networkMetadata";
-import { Metadata, TypeRegistry } from "@polkadot/types";
-import { wrapBytes } from "@polkadot/extension-dapp/wrapBytes";
+import { Metadata, TypeRegistry } from "@axiasolar-js/types";
+import { wrapBytes } from "@axiasolar-js/extension-dapp/wrapBytes";
 
-import { Keyring } from "@polkadot/keyring";
-import { KeypairType } from "@polkadot/util-crypto/types";
-import { KeyringPair, KeyringPair$Json } from "@polkadot/keyring/types";
-import { ApiPromise, SubmittableResult } from "@polkadot/api";
-import { SubmittableExtrinsic } from "@polkadot/api/types";
-import { ITuple } from "@polkadot/types/types";
-import { DispatchError } from "@polkadot/types/interfaces";
+import { Keyring } from "@axiasolar-js/keyring";
+import { KeypairType } from "@axiasolar-js/util-crypto/types";
+import { KeyringPair, KeyringPair$Json } from "@axiasolar-js/keyring/types";
+import { ApiPromise, SubmittableResult } from "@axiasolar-js/api";
+import { SubmittableExtrinsic } from "@axiasolar-js/api/types";
+import { ITuple } from "@axiasolar-js/types/types";
+import { DispatchError } from "@axiasolar-js/types/interfaces";
 let keyring = new Keyring({ ss58Format: 0, type: "sr25519" });
 
 /**
@@ -380,7 +380,7 @@ async function signTxAsExtension(password: string, json: any) {
       let registry: any;
       if (!(<any>window).api) {
         registry = new TypeRegistry();
-        registry.setMetadata(new Metadata(registry, metaDataMap["kusama"]));
+        registry.setMetadata(new Metadata(registry, metaDataMap["axialunar"]));
       } else {
         registry = (<any>window).api.registry;
       }

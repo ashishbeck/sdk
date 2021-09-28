@@ -1,4 +1,4 @@
-package io.polkawallet.www.example
+package io.axiawallet.www.example
 
 import io.flutter.embedding.android.FlutterActivity
 

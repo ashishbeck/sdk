@@ -1,17 +1,18 @@
-import { ApiPromise } from "@polkadot/api";
+import { ApiPromise } from "@axiasolar-js/api";
 import {
   DeriveStakerReward,
   DeriveStakingElected,
   DeriveSessionInfo,
   DeriveStakingWaiting
-} from "@polkadot/api-derive/types";
-import type { Option, StorageKey } from '@polkadot/types';
-import { u8aConcat, u8aToHex, BN_ZERO, BN_MILLION, BN_ONE, formatBalance, isFunction, arrayFlatten } from '@polkadot/util';
-import {  Nominations } from "@polkadot/types/interfaces";
+} from "@axiasolar-js/api-derive/types";
+import type { Option, StorageKey } from '@axiasolar-js/types';
+import { u8aConcat, u8aToHex, BN_ZERO, BN_MILLION, BN_ONE, formatBalance, isFunction, arrayFlatten } from '@axiasolar-js/util';
+import {  Nominations } from "@axiasolar-js/types/interfaces";
 import BN from "bn.js";
-import { web3Accounts, web3Enable } from "@polkadot/extension-dapp";
+import { web3Accounts, web3Enable } from "@axiasolar-js/extension-dapp";
 // import keyring from "../keyring";
-import keyring from "@polkadot/ui-keyring";
+import keyring from "@axiasolar-js/ui-keyring";
+import type { KeyringInstance, KeyringPair } from '@axiasolar-js/keyring/types';
 
 import { getInflationParams, Inflation } from './inflation';
 
@@ -829,10 +830,21 @@ async function asyncLoadAccounts() {
       keyring.loadAll({ isDevelopment: true }, allAccounts);
       // dispatch({ type: 'SET_KEYRING', payload: keyring });
       const keyringOptions = keyring.getPairs().map((account: any) => ({
-        key: account.address,
-        value: account.address,
-        text: account.meta.name.toUpperCase(),
-        icon: 'user'
+        address: account.address,
+        meta: account.meta,
+        pubKey: u8aToHex(account.publicKey),
+        // asd: account.
+        name: account.meta.name.toUpperCase(),
+        nameAlt: account.name,
+        // address: account.address,
+        encoded: account.encoded,
+        // pubKey: account.pubKey,
+        encoding: account.encoding,
+        // meta: account.meta,
+        memo: account.memo,
+        observation: account.observation,
+        icon: account.icon,
+        indexInfo: account.indexInfo
         }));
       // console.log("testing keyring options", keyringOptions);
       resolve(keyringOptions);

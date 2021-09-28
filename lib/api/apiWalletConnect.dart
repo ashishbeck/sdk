@@ -1,12 +1,12 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/walletConnect/pairingData.dart';
-import 'package:polkawallet_sdk/api/types/walletConnect/payloadData.dart';
-import 'package:polkawallet_sdk/service/walletConnect.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/api/types/walletConnect/pairingData.dart';
+import 'package:axiawallet_sdk/api/types/walletConnect/payloadData.dart';
+import 'package:axiawallet_sdk/service/walletConnect.dart';
 
 class ApiWalletConnect {
   ApiWalletConnect(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final AXIAWalletApi apiRoot;
   final ServiceWalletConnect service;
 
   void initClient(

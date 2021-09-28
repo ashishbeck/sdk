@@ -1,12 +1,12 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/plugin/store/balances.dart';
-import 'package:polkawallet_sdk/service/assets.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/api/types/balanceData.dart';
+import 'package:axiawallet_sdk/plugin/store/balances.dart';
+import 'package:axiawallet_sdk/service/assets.dart';
 
 class ApiAssets {
   ApiAssets(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final AXIAWalletApi apiRoot;
   final ServiceAssets service;
 
   Future<List<TokenBalanceData>> getAssetsAll() async {
@@ -24,9 +24,13 @@ class ApiAssets {
   Future<List<AssetsBalanceData>> queryAssetsBalances(
       List<String> ids, String address) async {
     final res = await service.queryAssetsBalances(ids, address);
-    return res.asMap().map((k, v) {
-      v['id'] = ids[k];
-      return MapEntry(k, AssetsBalanceData.fromJson(v));
-    }).values.toList();
+    return res
+        .asMap()
+        .map((k, v) {
+          v['id'] = ids[k];
+          return MapEntry(k, AssetsBalanceData.fromJson(v));
+        })
+        .values
+        .toList();
   }
 }

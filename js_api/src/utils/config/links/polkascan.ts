@@ -3,9 +3,9 @@ export default {
     // 'Centrifuge Mainnet': 'centrifuge',
     // Edgeware: 'edgeware',
     // Kulupu: 'kulupu',
-    Kusama: "kusama",
-    Polkadot: "polkadot",
-    "Polkadot CC1": "polkadot-cc1",
+    AXIALunar: "axialunar",
+    AXIASolar: "axiasolar",
+    "AXIASolar CC1": "axiasolar-cc1",
   },
   create: (chain: string, path: string, data: any) =>
     `https://polkascan.io/${chain}/${path}/${data.toString()}`,

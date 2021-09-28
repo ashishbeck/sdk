@@ -5,10 +5,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
+import 'package:axiawallet_sdk/api/api.dart';
+import 'package:axiawallet_sdk/storage/keyring.dart';
+import 'package:axiawallet_sdk/storage/types/keyPairData.dart';
+import 'package:axiawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewWithExtension extends StatefulWidget {
@@ -23,7 +23,7 @@ class WebViewWithExtension extends StatefulWidget {
   });
 
   final String initialUrl;
-  final PolkawalletApi api;
+  final AXIAWalletApi api;
   final Keyring keyring;
   final Function(String) onPageFinished;
   final Function onExtensionReady;
@@ -117,8 +117,8 @@ class _WebViewWithExtensionState extends State<WebViewWithExtension> {
         print('Page finished loading: $url');
 
         print('Inject extension js code...');
-        final jsCode = await rootBundle.loadString(
-            'packages/polkawallet_sdk/js_as_extension/dist/main.js');
+        final jsCode = await rootBundle
+            .loadString('packages/axiawallet_sdk/js_as_extension/dist/main.js');
         _controller.evaluateJavascript(jsCode);
         print('js code injected');
         if (widget.onExtensionReady != null) {

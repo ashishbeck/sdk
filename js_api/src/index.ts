@@ -1,4 +1,4 @@
-import { WsProvider, ApiPromise } from "@polkadot/api";
+import { WsProvider, ApiPromise } from "@axiasolar-js/api";
 import { subscribeMessage, getNetworkConst, getNetworkProperties } from "./service/setting";
 import keyring from "./service/keyring";
 import account from "./service/account";

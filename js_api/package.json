@@ -1,11 +1,11 @@
 {
-  "name": "@polkawallet/js-api",
+  "name": "@axiawallet/js-api",
   "version": "0.2.8",
   "main": "index.js",
   "license": "Apache-2.0",
   "keywords": [
-    "Polkadot",
-    "Polkawallet"
+    "AXIASolar",
+    "AXIAWallet"
   ],
   "author": "Shawn yang <dhryxy@gmail.com>",
   "maintainers": [
@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polkawallet-io/js_api.git"
+    "url": "git+https://github.com/axiawallet-io/js_api.git"
   },
   "bugs": {
-    "url": "https://github.com/polkawallet-io/js_api/issues"
+    "url": "https://github.com/axiawallet-io/js_api/issues"
   },
   "scripts": {
     "clean": "rm -rf dist/*",
@@ -24,13 +24,13 @@
     "build-dev": "webpack --mode development"
   },
   "resolutions": {
-    "@polkadot/api": "^5.5.1"
+    "@axiasolar-js/api": "^1.1.0"
   },
   "dependencies": {
-    "@polkadot/api": "^5.5.1",
-    "@polkadot/extension-dapp": "^0.39.3",
-    "@polkadot/ui-keyring": "^0.85.1",
-    "@polkadot/ui-shared": "0.85.1",
+    "@axiasolar-js/api": "^1.1.0",
+    "@axiasolar-js/extension-dapp": "^1.1.0",
+    "@axiasolar-js/ui-keyring": "^1.1.0",
+    "@axiasolar-js/ui-shared": "1.1.0",
     "@walletconnect/client": "2.0.0-alpha.26",
     "bn.js": "^5.1.2",
     "oo7-substrate": "^0.8.0",

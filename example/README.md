@@ -1,6 +1,6 @@
 # example
 
-polkawallet_sdk_example.
+axiawallet_sdk_example.
 
 ## Getting Started
 
