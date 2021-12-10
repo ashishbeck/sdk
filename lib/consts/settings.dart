@@ -3,5 +3,5 @@ const network_ss58_map = {
   'laminar': 42,
   'axialunar': 2,
   'substrate': 42,
-  'axiasolar': 0,
+  'axia': 0,
 };

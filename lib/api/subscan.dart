@@ -49,8 +49,8 @@ class SubScanApi {
   final String moduleRecovery = 'Recovery';
 
   static String getSnEndpoint(String network) {
-    if (network.contains('axiasolar')) {
-      network = 'axiasolar';
+    if (network.contains('axia')) {
+      network = 'axia';
     }
     if (network.contains('acala')) {
       network = 'acala-testnet';
