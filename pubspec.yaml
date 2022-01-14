@@ -37,8 +37,8 @@ flutter:
 
   # To add assets to your package, add an assets section, like this:
    assets:
-     - lib/ssl/certificate.pem
-     - lib/ssl/keys.pem
+     - lib/ssl/certificate.txt
+     - lib/ssl/keys.txt
      - assets/index.html
      - js_api/dist/main.js
      - js_as_extension/dist/main.js

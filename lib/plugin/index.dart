@@ -203,7 +203,7 @@ class PluginBasicData {
     this.icon,
     this.iconDisabled,
     this.jsCodeVersion,
-    this.isTestNet = true,
+    this.isTestNet = false,
     this.isXCMSupport = false,
     this.parachainId,
   });

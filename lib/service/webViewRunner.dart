@@ -102,9 +102,9 @@ class WebViewRunner {
 
   Future<void> _startLocalServer() async {
     final cert = await rootBundle
-        .load("packages/axiawallet_sdk/lib/ssl/certificate.pem");
+        .load("packages/axiawallet_sdk/lib/ssl/certificate.txt");
     final keys =
-        await rootBundle.load("packages/axiawallet_sdk/lib/ssl/keys.pem");
+        await rootBundle.load("packages/axiawallet_sdk/lib/ssl/keys.txt");
     final security = new SecurityContext()
       ..useCertificateChainBytes(cert.buffer.asInt8List())
       ..usePrivateKeyBytes(keys.buffer.asInt8List());

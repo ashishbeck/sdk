@@ -13,4 +13,5 @@ abstract class _NetworkParams {
   String name = '';
   String endpoint = '';
   int ss58 = 0;
+  bool isTestNet = false;
 }
