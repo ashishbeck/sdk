@@ -80,7 +80,7 @@ abstract class AXIAWalletPlugin implements AXIAWalletPluginBase {
 
   void loadBalances(KeyPairData acc) {
     // do not load balance data from cache if we have no decimals data.
-    if (networkState.tokenDecimals == null) return;
+    // if (networkState.tokenDecimals == null) return;
 
     _updateBalances(
         acc,
