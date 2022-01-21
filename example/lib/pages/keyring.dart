@@ -328,7 +328,7 @@ class _KeyringPageState extends State<KeyringPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       RaisedButton(
-                        child: Text('AXIASolar: 0'),
+                        child: Text('AXIA: 0'),
                         color:
                             _ss58 == 0 ? Theme.of(context).primaryColor : null,
                         onPressed: () => _setSS58(0),

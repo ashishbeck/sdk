@@ -1,19 +1,19 @@
-import { keyExtractSuri, mnemonicGenerate, cryptoWaitReady, signatureVerify } from "@axiasolar-js/util-crypto";
-import { hexToU8a, u8aToHex } from "@axiasolar-js/util";
+import { keyExtractSuri, mnemonicGenerate, cryptoWaitReady, signatureVerify } from "@axia-js/util-crypto";
+import { hexToU8a, u8aToHex } from "@axia-js/util";
 import BN from "bn.js";
 import { parseQrCode, getSigner, makeTx, getSubmittable } from "../utils/QrSigner";
 import gov from "./gov";
 import metaDataMap from "../constants/networkMetadata";
-import { Metadata, TypeRegistry } from "@axiasolar-js/types";
-import { wrapBytes } from "@axiasolar-js/extension-dapp/wrapBytes";
+import { Metadata, TypeRegistry } from "@axia-js/types";
+import { wrapBytes } from "@axia-js/extension-dapp/wrapBytes";
 
-import { Keyring } from "@axiasolar-js/keyring";
-import { KeypairType } from "@axiasolar-js/util-crypto/types";
-import { KeyringPair, KeyringPair$Json } from "@axiasolar-js/keyring/types";
-import { ApiPromise, SubmittableResult } from "@axiasolar-js/api";
-import { SubmittableExtrinsic } from "@axiasolar-js/api/types";
-import { ITuple } from "@axiasolar-js/types/types";
-import { DispatchError } from "@axiasolar-js/types/interfaces";
+import { Keyring } from "@axia-js/keyring";
+import { KeypairType } from "@axia-js/util-crypto/types";
+import { KeyringPair, KeyringPair$Json } from "@axia-js/keyring/types";
+import { ApiPromise, SubmittableResult } from "@axia-js/api";
+import { SubmittableExtrinsic } from "@axia-js/api/types";
+import { ITuple } from "@axia-js/types/types";
+import { DispatchError } from "@axia-js/types/interfaces";
 let keyring = new Keyring({ ss58Format: 0, type: "sr25519" });
 
 /**

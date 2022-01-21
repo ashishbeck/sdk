@@ -2,7 +2,7 @@ export default {
   chains: {
     AXIALunar: "axialunar",
     "AXIALunar CC3": "axialunar",
-    AXIASolar: "axiasolar",
+    AXIA: "axia",
   },
   create: (chain: string, path: string, data: any) =>
     `https://${chain}.polkassembly.io/${path}/${data.toString()}`,

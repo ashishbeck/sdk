@@ -16,10 +16,10 @@ import 'package:axiawallet_sdk/api/types/networkParams.dart';
 import 'package:axiawallet_sdk/service/index.dart';
 import 'package:axiawallet_sdk/storage/keyring.dart';
 
-/// The [AXIAWalletApi] instance is the wrapper of `axiasolar-js/api`.
+/// The [AXIAWalletApi] instance is the wrapper of `axia-js/api`.
 /// It provides:
-/// * [ApiKeyring] of npm package [@axiasolar/keyring](https://www.npmjs.com/package/@axiasolar/keyring)
-/// * [ApiSetting], the [networkConst] and [networkProperties] of `axiasolar-js/api`.
+/// * [ApiKeyring] of npm package [@axia/keyring](https://www.npmjs.com/package/@axia/keyring)
+/// * [ApiSetting], the [networkConst] and [networkProperties] of `axia-js/api`.
 /// * [ApiAccount], for querying on-chain data of accounts, like balances or indices.
 /// * [ApiTx], sign and send tx.
 /// * [ApiStaking] and [ApiGov], the staking and governance module of substrate.

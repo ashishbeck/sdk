@@ -1,6 +1,6 @@
 {
   "name": "@axiawallet/extension",
-  "description": "A AXIAWallet signer for the @axiasolar-js/api",
+  "description": "A AXIAWallet signer for the @axia-js/api",
   "version": "0.2.0-beta.1",
   "author": "Shawn Yang <dhryxy@gmail.com>",
   "license": "Apache-2",
@@ -12,12 +12,12 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@babel/runtime": "^7.14.5",
-    "@axiasolar-js/extension-base": "^1.0.0",
-    "@axiasolar-js/extension-dapp": "^1.0.0",
-    "@axiasolar-js/extension-inject": "^1.0.0"
+    "@axia-js/extension-base": "^1.0.0",
+    "@axia-js/extension-dapp": "^1.0.0",
+    "@axia-js/extension-inject": "^1.0.0"
   },
   "devDependencies": {
-    "@axiasolar-js/dev": "^1.1.0",
+    "@axia-js/dev": "^1.1.0",
     "@babel/core": "^7.14.5",
     "@babel/preset-env": "^7.8.3",
     "@webpack-cli/info": "^0.2.0",

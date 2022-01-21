@@ -1,5 +1,5 @@
-import { allNetworks } from "@axiasolar-js/networks";
-import { assert } from "@axiasolar-js/util";
+import { allNetworks } from "@axia-js/networks";
+import { assert } from "@axia-js/util";
 
 const colors = {
   background: {
@@ -41,7 +41,7 @@ export const UnknownNetworkKeys = Object.freeze({
 // genesisHash is used as Network key for Substrate networks
 export const SubstrateNetworkKeys = Object.freeze({
   AXIALUNAR: "0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe", // https://polkascan.io/pre/axialunar-cc3/block/0
-  AXIASOLAR: "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
+  AXIA: "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
 });
 
 const unknownNetworkBase = {
@@ -67,14 +67,14 @@ const substrateNetworkBase = {
     title: "AXIALunar",
     unit: "KSM",
   },
-  [SubstrateNetworkKeys.AXIASOLAR]: {
+  [SubstrateNetworkKeys.AXIA]: {
     color: "#E6027A",
     decimals: 12,
     genesisHash: null,
     order: 1,
-    pathId: "axiasolar",
+    pathId: "axia",
     prefix: 0,
-    title: "AXIASolar",
+    title: "AXIA",
     unit: "DOT",
   },
 };
@@ -116,4 +116,4 @@ function getGenesis(name: string): string {
   return network.genesisHash[0];
 }
 export const AXIALUNAR_GENESIS = getGenesis("axialunar");
-export const AXIASOLAR_GENESIS = getGenesis("axiasolar");
+export const AXIA_GENESIS = getGenesis("axia");

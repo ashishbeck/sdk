@@ -1,9 +1,9 @@
-import { ApiPromise } from "@axiasolar-js/api";
-import { DeriveCollectiveProposal, DeriveReferendumExt, DeriveCouncilVotes } from "@axiasolar-js/api-derive/types";
-import { SubmittableExtrinsic } from "@axiasolar-js/api/types";
-import { GenericCall, getTypeDef, Option, Bytes } from "@axiasolar-js/types";
-import { OpenTip, AccountId, FunctionMetadataLatest } from "@axiasolar-js/types/interfaces";
-import { formatBalance, stringToU8a, BN_ZERO, hexToString } from "@axiasolar-js/util";
+import { ApiPromise } from "@axia-js/api";
+import { DeriveCollectiveProposal, DeriveReferendumExt, DeriveCouncilVotes } from "@axia-js/api-derive/types";
+import { SubmittableExtrinsic } from "@axia-js/api/types";
+import { GenericCall, getTypeDef, Option, Bytes } from "@axia-js/types";
+import { OpenTip, AccountId, FunctionMetadataLatest } from "@axia-js/types/interfaces";
+import { formatBalance, stringToU8a, BN_ZERO, hexToString } from "@axia-js/util";
 import BN from "bn.js";
 
 import { approxChanges } from "../utils/referendumApproxChanges";
@@ -102,7 +102,7 @@ async function fetchReferendums(api: ApiPromise, address: string) {
 
 const CONVICTIONS = [1, 2, 4, 8, 16, 32].map((lock, index) => [index + 1, lock]);
 const SEC_DAY = 60 * 60 * 24;
-// REMOVE once AXIASolar is upgraded with the correct conviction
+// REMOVE once AXIA is upgraded with the correct conviction
 const PERIODS = {
   "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3": new BN(403200),
 };

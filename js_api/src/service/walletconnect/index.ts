@@ -1,9 +1,9 @@
-import { ApiPromise } from "@axiasolar-js/api";
+import { ApiPromise } from "@axia-js/api";
 import WalletConnectClient, { CLIENT_EVENTS } from "@walletconnect/client";
 import { SessionTypes, ClientTypes } from "@walletconnect/types";
 
-import { Keyring } from "@axiasolar-js/keyring";
-import { hexToU8a, u8aToHex, isHex, stringToU8a } from "@axiasolar-js/util";
+import { Keyring } from "@axia-js/keyring";
+import { hexToU8a, u8aToHex, isHex, stringToU8a } from "@axia-js/util";
 
 let client: WalletConnectClient;
 
@@ -78,7 +78,7 @@ async function approveProposal(proposal: SessionTypes.Proposal, address: string)
   const response: SessionTypes.Response = {
     metadata: {
       name: "AXIAWallet",
-      description: "Mobile wallet for axiasolar ecosystem.",
+      description: "Mobile wallet for axia ecosystem.",
       url: "#",
       icons: ["https://axiawallet.io/images/logo.png"],
     },

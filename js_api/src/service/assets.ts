@@ -1,4 +1,4 @@
-import { ApiPromise } from "@axiasolar-js/api";
+import { ApiPromise } from "@axia-js/api";
 
 /**
  * get assets ids of statemine/statemint network.

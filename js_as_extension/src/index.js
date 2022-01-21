@@ -1,7 +1,7 @@
 import "@babel/polyfill";
-import { enable, handleResponse } from "@axiasolar-js/extension-base/page";
-import { injectExtension } from "@axiasolar-js/extension-inject";
-import { web3Accounts, web3Enable } from "@axiasolar-js/extension-dapp";
+import { enable, handleResponse } from "@axia-js/extension-base/page";
+import { injectExtension } from "@axia-js/extension-inject";
+import { web3Accounts, web3Enable } from "@axia-js/extension-dapp";
 import handlers from "./handlers";
 
 // send message to JSChannel: assembly

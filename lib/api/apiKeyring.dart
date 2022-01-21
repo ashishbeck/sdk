@@ -11,7 +11,7 @@ import 'package:axiawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dar
 enum KeyType { mnemonic, rawSeed, keystore }
 enum CryptoType { sr25519, ed25519 }
 
-/// Keyring API manages keyPairs for through `axiasolar-js/keyring`
+/// Keyring API manages keyPairs for through `axia-js/keyring`
 class ApiKeyring {
   ApiKeyring(this.apiRoot, this.service);
 

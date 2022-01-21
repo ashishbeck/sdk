@@ -15,7 +15,7 @@ import 'package:axiawallet_sdk/service/walletConnect.dart';
 import 'package:axiawallet_sdk/service/webViewRunner.dart';
 import 'package:axiawallet_sdk/storage/keyring.dart';
 
-/// The service calling JavaScript API of `axiasolar-js/api` directly
+/// The service calling JavaScript API of `axia-js/api` directly
 /// through [WebViewRunner], providing APIs for [AXIAWalletApi].
 class SubstrateService {
   ServiceKeyring keyring;

@@ -2,8 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'txInfoData.g.dart';
 
-/// call api.tx[module][call](...params) with axiasolar-js/api
-/// see https://axiasolar.js.org/api/substrate/extrinsics.html
+/// call api.tx[module][call](...params) with axia-js/api
+/// see https://axia.js.org/api/substrate/extrinsics.html
 /// for all available calls and params.
 @JsonSerializable(explicitToJson: true)
 class TxInfoData {

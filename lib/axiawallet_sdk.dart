@@ -7,7 +7,7 @@ import 'package:axiawallet_sdk/service/index.dart';
 import 'package:axiawallet_sdk/service/webViewRunner.dart';
 import 'package:axiawallet_sdk/storage/keyring.dart';
 
-/// SDK launchs a hidden webView to run axiasolar.js/api for interacting
+/// SDK launchs a hidden webView to run axia.js/api for interacting
 /// with the substrate-based block-chain network.
 class WalletSDK {
   AXIAWalletApi api;
@@ -19,7 +19,7 @@ class WalletSDK {
   WebViewRunner get webView => _service.webView;
 
   /// param [jsCode] is customized js code of parachain,
-  /// the api works without [jsCode] param in AXIALunar/AXIASolar.
+  /// the api works without [jsCode] param in AXIALunar/AXIA.
   Future<void> init(
     Keyring keyring, {
     WebViewRunner webView,

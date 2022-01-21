@@ -1,11 +1,11 @@
-import { cryptoWaitReady } from "@axiasolar-js/util-crypto";
-import { hexToU8a, u8aToHex, hexToString } from "@axiasolar-js/util";
+import { cryptoWaitReady } from "@axia-js/util-crypto";
+import { hexToU8a, u8aToHex, hexToString } from "@axia-js/util";
 // @ts-ignore
 import { ss58Decode } from "oo7-substrate/src/ss58";
-import { axiasolarIcon } from "@axiasolar-js/ui-shared";
+import { axiaIcon } from "@axia-js/ui-shared";
 
-import { Keyring } from "@axiasolar-js/keyring";
-import { ApiPromise } from "@axiasolar-js/api";
+import { Keyring } from "@axia-js/keyring";
+import { ApiPromise } from "@axia-js/api";
 
 import { subscribeMessage } from "./setting";
 let keyring = new Keyring({ ss58Format: 0, type: "sr25519" });
@@ -15,7 +15,7 @@ let keyring = new Keyring({ ss58Format: 0, type: "sr25519" });
  */
 async function genIcons(addresses: string[]) {
   return addresses.map((i) => {
-    const circles = axiasolarIcon(i, { isAlternative: false })
+    const circles = axiaIcon(i, { isAlternative: false })
       .map(({ cx, cy, fill, r }) => `<circle cx='${cx}' cy='${cy}' fill='${fill}' r='${r}' />`)
       .join("");
     return [i, `<svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'>${circles}</svg>`];

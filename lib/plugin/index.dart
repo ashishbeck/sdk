@@ -92,7 +92,7 @@ abstract class AXIAWalletPlugin implements AXIAWalletPluginBase {
 
   /// This method will be called while App switched to a plugin.
   /// In this method, the plugin will init [WalletSDK] and start
-  /// a webView for running `axiasolar-js/api`.
+  /// a webView for running `axia-js/api`.
   Future<void> beforeStart(
     Keyring keyring, {
     WebViewRunner webView,

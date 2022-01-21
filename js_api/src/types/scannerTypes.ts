@@ -1,5 +1,5 @@
-import { SubmittableExtrinsic } from "@axiasolar-js/api/types";
-import { SignerPayloadJSON } from "@axiasolar-js/types/types";
+import { SubmittableExtrinsic } from "@axia-js/api/types";
+import { SignerPayloadJSON } from "@axia-js/types/types";
 
 export type QRSigner = {
   completedFramesCount: number;

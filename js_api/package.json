@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "keywords": [
-    "AXIASolar",
+    "AXIA",
     "AXIAWallet"
   ],
   "author": "Shawn yang <dhryxy@gmail.com>",
@@ -24,13 +24,13 @@
     "build-dev": "webpack --mode development"
   },
   "resolutions": {
-    "@axiasolar-js/api": "^1.1.0"
+    "@axia-js/api": "^0.1.1"
   },
   "dependencies": {
-    "@axiasolar-js/api": "^1.1.0",
-    "@axiasolar-js/extension-dapp": "^1.1.0",
-    "@axiasolar-js/ui-keyring": "^1.1.0",
-    "@axiasolar-js/ui-shared": "1.1.0",
+    "@axia-js/api": "^0.1.1",
+    "@axia-js/extension-dapp": "^0.1.0",
+    "@axia-js/ui-keyring": "^0.1.0",
+    "@axia-js/ui-shared": "0.1.0",
     "@walletconnect/client": "2.0.0-alpha.26",
     "bn.js": "^5.1.2",
     "oo7-substrate": "^0.8.0",

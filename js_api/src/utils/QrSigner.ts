@@ -1,7 +1,7 @@
-import { ApiPromise } from "@axiasolar-js/api";
-import { SubmittableExtrinsic } from "@axiasolar-js/api/types";
-import { compactFromU8a, hexStripPrefix, hexToU8a, u8aConcat, u8aToHex, u8aToU8a } from "@axiasolar-js/util";
-import { encodeAddress, decodeAddress, blake2AsU8a } from "@axiasolar-js/util-crypto";
+import { ApiPromise } from "@axia-js/api";
+import { SubmittableExtrinsic } from "@axia-js/api/types";
+import { compactFromU8a, hexStripPrefix, hexToU8a, u8aConcat, u8aToHex, u8aToU8a } from "@axia-js/util";
+import { encodeAddress, decodeAddress, blake2AsU8a } from "@axia-js/util-crypto";
 import { SUBSTRATE_NETWORK_LIST } from "../constants/networkSpect";
 import gov from "../service/gov";
 import { QRSigner, QRSubmittable } from "../types/scannerTypes";

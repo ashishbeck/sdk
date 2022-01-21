@@ -1,18 +1,18 @@
-import { ApiPromise } from "@axiasolar-js/api";
+import { ApiPromise } from "@axia-js/api";
 import {
   DeriveStakerReward,
   DeriveStakingElected,
   DeriveSessionInfo,
   DeriveStakingWaiting
-} from "@axiasolar-js/api-derive/types";
-import type { Option, StorageKey } from '@axiasolar-js/types';
-import { u8aConcat, u8aToHex, BN_ZERO, BN_MILLION, BN_ONE, formatBalance, isFunction, arrayFlatten } from '@axiasolar-js/util';
-import {  Nominations } from "@axiasolar-js/types/interfaces";
+} from "@axia-js/api-derive/types";
+import type { Option, StorageKey } from '@axia-js/types';
+import { u8aConcat, u8aToHex, BN_ZERO, BN_MILLION, BN_ONE, formatBalance, isFunction, arrayFlatten } from '@axia-js/util';
+import {  Nominations } from "@axia-js/types/interfaces";
 import BN from "bn.js";
-import { web3Accounts, web3Enable } from "@axiasolar-js/extension-dapp";
+import { web3Accounts, web3Enable } from "@axia-js/extension-dapp";
 // import keyring from "../keyring";
-import keyring from "@axiasolar-js/ui-keyring";
-import type { KeyringInstance, KeyringPair } from '@axiasolar-js/keyring/types';
+import keyring from "@axia-js/ui-keyring";
+import type { KeyringInstance, KeyringPair } from '@axia-js/keyring/types';
 
 import { getInflationParams, Inflation } from './inflation';
 

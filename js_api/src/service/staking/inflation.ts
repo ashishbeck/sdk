@@ -1,9 +1,9 @@
-// Copyright 2017-2021 @axiasolar-js/app-config authors & contributors
+// Copyright 2017-2021 @axia-js/app-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ApiPromise } from '@axiasolar-js/api';
+import type { ApiPromise } from '@axia-js/api';
 
-import { AXIALUNAR_GENESIS, AXIASOLAR_GENESIS } from '../../constants/networkSpect';
+import { AXIALUNAR_GENESIS, AXIA_GENESIS } from '../../constants/networkSpect';
 
 export interface Inflation {
   inflation: number;
@@ -26,7 +26,7 @@ const DEFAULT_PARAMS: InflationParams = {
 
 const KNOWN_PARAMS: Record<string, InflationParams> = {
   [AXIALUNAR_GENESIS]: { ...DEFAULT_PARAMS, idealStake: 0.75 },
-  [AXIASOLAR_GENESIS]: { ...DEFAULT_PARAMS, idealStake: 0.75 }
+  [AXIA_GENESIS]: { ...DEFAULT_PARAMS, idealStake: 0.75 }
 };
 
 export function getInflationParams (api: ApiPromise): InflationParams {

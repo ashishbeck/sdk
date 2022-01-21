@@ -1,7 +1,7 @@
 import BN from "bn.js";
-import { VoteThreshold } from "@axiasolar-js/types/interfaces";
-import { calcPassing } from "@axiasolar-js/api-derive/democracy/util";
-import { BN_ZERO, BN_ONE, BN_TEN } from "@axiasolar-js/util";
+import { VoteThreshold } from "@axia-js/types/interfaces";
+import { calcPassing } from "@axia-js/api-derive/democracy/util";
+import { BN_ZERO, BN_ONE, BN_TEN } from "@axia-js/util";
 
 interface Approx {
   changeAye: BN;

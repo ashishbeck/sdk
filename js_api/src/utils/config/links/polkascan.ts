@@ -4,8 +4,8 @@ export default {
     // Edgeware: 'edgeware',
     // Kulupu: 'kulupu',
     AXIALunar: "axialunar",
-    AXIASolar: "axiasolar",
-    "AXIASolar CC1": "axiasolar-cc1",
+    AXIA: "axia",
+    "AXIA CC1": "axia-cc1",
   },
   create: (chain: string, path: string, data: any) =>
     `https://polkascan.io/${chain}/${path}/${data.toString()}`,

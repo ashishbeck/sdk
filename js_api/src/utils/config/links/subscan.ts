@@ -3,8 +3,8 @@ export default {
     "Acala Mandala TC4": "acala-testnet",
     AXIALunar: "axialunar",
     "AXIALunar CC3": "axialunar",
-    AXIASolar: "axiasolar",
-    "AXIASolar CC1": "axiasolar-cc1",
+    AXIA: "axia",
+    "AXIA CC1": "axia-cc1",
     AlphaNet: "alphanet",
   },
   create: (chain: string, path: string, data: any) =>

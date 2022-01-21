@@ -20,13 +20,13 @@ and install the dependencies.
 flutter pub get
 ```
 
-## 2. Build your axiasolar-js wrapper
+## 2. Build your axia-js wrapper
 
-The App use a `axiasolar-js/api` instance running in a hidden webView
+The App use a `axia-js/api` instance running in a hidden webView
 to connect to remote node.
 
 Examples:
- - axialunar/axiasolar: [https://github.com/axiawallet-io/js_api](https://github.com/axiawallet-io/js_api)
+ - axialunar/axia: [https://github.com/axiawallet-io/js_api](https://github.com/axiawallet-io/js_api)
  - acala: [https://github.com/axiawallet-io/axiawallet_plugin_acala/tree/master/lib/js_service_acala](https://github.com/axiawallet-io/axiawallet_plugin_acala/tree/master/lib/js_service_acala)
  - laminar: [https://github.com/axiawallet-io/axiawallet_plugin_laminar/tree/master/lib/axiawallet_plugin_laminar](https://github.com/axiawallet-io/axiawallet_plugin_laminar/tree/master/lib/axiawallet_plugin_laminar)
 
@@ -133,7 +133,7 @@ Define navigation route for your plugin pages.
 ```
 
 #### 3.6. override `AXIAWalletPlugin.loadJSCode()` method
-Load the `axiasolar-js/api` wrapper you built in step 2.
+Load the `axia-js/api` wrapper you built in step 2.
 ```dart
   @override
   Future<String> loadJSCode() => rootBundle.loadString(
@@ -147,7 +147,7 @@ Load the `axiasolar-js/api` wrapper you built in step 2.
  cache of the prev account and query data for new account.
 
 Examples:
- - [axialunar/axiasolar](https://github.com/axiawallet-io/axiawallet_plugin_axialunar/blob/master/lib/axiawallet_plugin_axialunar.dart)
+ - [axialunar/axia](https://github.com/axiawallet-io/axiawallet_plugin_axialunar/blob/master/lib/axiawallet_plugin_axialunar.dart)
  - [acala](https://github.com/axiawallet-io/axiawallet_plugin_acala/blob/master/lib/axiawallet_plugin_acala.dart)
  - [laminar](https://github.com/axiawallet-io/axiawallet_plugin_laminar/blob/master/lib/axiawallet_plugin_laminar.dart)
 
@@ -189,7 +189,7 @@ While we set data to MobX store, the MobX Observer Flutter Widget will rebuild w
 ## 5. Run your pages in `example/` app
 You may want to run an example app in dev while building your plugin pages.
 
-See the `axialunar/axiasolar` or `acala` or `laminar` examples:
- - [axialunar/axiasolar](https://github.com/axiawallet-io/axiawallet_plugin_axialunar)
+See the `axialunar/axia` or `acala` or `laminar` examples:
+ - [axialunar/axia](https://github.com/axiawallet-io/axiawallet_plugin_axialunar)
  - [acala](https://github.com/axiawallet-io/axiawallet_plugin_acala)
  - [laminar](https://github.com/axiawallet-io/axiawallet_plugin_laminar)

@@ -1,8 +1,8 @@
 # js_api
 
-Wrap `@axiasolar-js-js/api` to provide APIs for axiawallet/sdk.
+Wrap `@axia-js-js/api` to provide APIs for axiawallet/sdk.
 
-@axiasolar-js-js/api: ^v1.29.1
+@axia-js-js/api: ^v1.29.1
 
 ## build & test
 

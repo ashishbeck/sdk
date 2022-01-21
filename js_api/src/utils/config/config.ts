@@ -1,4 +1,4 @@
-import { ApiPromise } from "@axiasolar-js/api";
+import { ApiPromise } from "@axia-js/api";
 import linked from "./links/index";
 
 function _shortName(name: string) {

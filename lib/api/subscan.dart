@@ -55,7 +55,7 @@ class SubScanApi {
     if (network.contains('acala')) {
       network = 'acala-testnet';
     }
-    // return 'https://axiasolar.api.subscan.io/api/scan';
+    // return 'https://axia.api.subscan.io/api/scan';
     return 'https://$network.api.subscan.io/api/scan';
   }
 
