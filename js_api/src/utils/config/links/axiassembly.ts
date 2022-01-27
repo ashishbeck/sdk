@@ -5,7 +5,7 @@ export default {
     AXIA: "axia",
   },
   create: (chain: string, path: string, data: any) =>
-    `https://${chain}.polkassembly.io/${path}/${data.toString()}`,
+    `https://${chain}.axiassembly.io/${path}/${data.toString()}`,
   isActive: true,
   paths: {
     council: "motion",
@@ -13,5 +13,5 @@ export default {
     referendum: "referendum",
     treasury: "treasury",
   },
-  url: "https://polkassembly.io/",
+  url: "https://axiassembly.io/",
 };

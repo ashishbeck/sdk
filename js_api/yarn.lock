@@ -1523,9 +1523,9 @@
   dependencies:
     pino "^6.7.0"
 
-"@polkadot/util@^0.41.1":
+"@axia/util@^0.41.1":
   version "0.41.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-0.41.1.tgz#b67762a0a7408138d843adc7240944e704e819e7"
+  resolved "https://registry.yarnpkg.com/@axia/util/-/util-0.41.1.tgz#b67762a0a7408138d843adc7240944e704e819e7"
   integrity sha512-1mFHxxdXyRgeFk0ygfJklzsf6HiEEMikrpUgr+3Dw5S7KromjPD8EbWkpcZQZ3Png5PTwGyjrx7MYY4Ajiu5xQ==
   dependencies:
     "@babel/runtime" "^7.4.0"
@@ -1538,14 +1538,14 @@
     ip-regex "^4.0.0"
     moment "^2.24.0"
 
-"@polkadot/wasm-crypto@^0.5.1":
+"@axia/wasm-crypto@^0.5.1":
   version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-crypto/-/wasm-crypto-0.5.1.tgz#3d5734d6dc2f5174a411689f78538287d21bd710"
+  resolved "https://registry.yarnpkg.com/@axia/wasm-crypto/-/wasm-crypto-0.5.1.tgz#3d5734d6dc2f5174a411689f78538287d21bd710"
   integrity sha512-8h7uz85bvLVirtbxLkELr9H25oqAfgnQuDP6FP3QJeag7VfMtVvRF5U2JWGgsiUSiRg+UJnTuCleOSDnageRmg==
 
-"@polkadot/wasm-schnorrkel@^0.3.1":
+"@axia/wasm-schnorrkel@^0.3.1":
   version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/wasm-schnorrkel/-/wasm-schnorrkel-0.3.1.tgz#08287848f769dee4955517348905888bd289f277"
+  resolved "https://registry.yarnpkg.com/@axia/wasm-schnorrkel/-/wasm-schnorrkel-0.3.1.tgz#08287848f769dee4955517348905888bd289f277"
   integrity sha512-2J/lNZe7oDWvzUbsEfvKfiiAvBIBbIsppeBGahwSg2Y+cLweQgThXGizPpQoPo0tHxgMKdTi6jhPu7tLzCW/cA==
 
 "@sindresorhus/is@^0.14.0":
@@ -7706,9 +7706,9 @@ oo7-substrate@^0.8.0:
   resolved "https://registry.yarnpkg.com/oo7-substrate/-/oo7-substrate-0.8.0.tgz#690a6ec145287ae0cbb5647146f3ce76a8a28ff3"
   integrity sha512-ltglsNXZNmiDsJ5q4LYx0tf0SN0CVjW5fSifwrBRe/objxG2fYXogZ4eiNdsLJrTddvskv+3o5JpvFw/D3PCUA==
   dependencies:
-    "@polkadot/util" "^0.41.1"
-    "@polkadot/wasm-crypto" "^0.5.1"
-    "@polkadot/wasm-schnorrkel" "^0.3.1"
+    "@axia/util" "^0.41.1"
+    "@axia/wasm-crypto" "^0.5.1"
+    "@axia/wasm-schnorrkel" "^0.3.1"
     base-x "^3.0.4"
     bip39 "^2.5.0"
     blakejs "^1.1.0"

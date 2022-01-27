@@ -51,7 +51,7 @@ const settings = {
   subscribeMessage,
   getNetworkConst,
   getNetworkProperties,
-  // generate external links to polkascan/subscan/polkassembly...
+  // generate external links to axiascan/subscan/axiassembly...
   genLinks,
 };
 

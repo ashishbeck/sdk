@@ -155,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Divider(),
             ListTile(
               title: Text('WebViewWithExtension'),
-              subtitle: Text('open polkassembly.io (DApp)'),
+              subtitle: Text('open axiassembly.io (DApp)'),
               trailing: trailing,
               onTap: () {
                 if (!widget.sdkReady) return;

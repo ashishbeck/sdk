@@ -8,7 +8,7 @@ export default {
     "AXIA CC1": "axia-cc1",
   },
   create: (chain: string, path: string, data: any) =>
-    `https://polkascan.io/${chain}/${path}/${data.toString()}`,
+    `https://axiascan.io/${chain}/${path}/${data.toString()}`,
   isActive: true,
   paths: {
     address: "account",
@@ -20,5 +20,5 @@ export default {
     techcomm: "techcomm/proposal",
     treasury: "treasury/proposal",
   },
-  url: "https://polkascan.io/",
+  url: "https://axiascan.io/",
 };
